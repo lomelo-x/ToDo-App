@@ -36,9 +36,11 @@ export default function App() {
 				<View style={styles.itemsContainer}>
 					{taskItems.map((item, index) => {
 						return (
-							<TouchableOpacity onPress={() => completeTask(index)} key={index}>
+							<TouchableOpacity key={index}>
 								<Task text={item} completeTask={completeTask} index={index} />
 							</TouchableOpacity>
+							
+							<Task key={index} text={item} completeTask={completeTask} index={index} />
 						);
 					})}
 				</View>

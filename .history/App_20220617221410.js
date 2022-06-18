@@ -38,7 +38,6 @@ export default function App() {
 						return (
 							<TouchableOpacity onPress={() => completeTask(index)} key={index}>
 								<Task text={item} completeTask={completeTask} index={index} />
-							</TouchableOpacity>
 						);
 					})}
 				</View>
