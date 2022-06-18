@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 		width: '100%',
 		flexDirection: 'row',
 		alignItems: 'center',
-		justifyContent: 'space-around',
+		justifyContent: 'space-between',
 		paddingHorizontal: 15,
 		paddingVertical: 15,
 		borderRadius: 10,
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
 	},
 writeTaskInput: {
 		borderWidth: 1,
-		backgroundColor: '#fff',
 		borderColor: '#e3e3e3',
 		borderRadius: 10,
 		padding: 10,
@@ -68,9 +67,9 @@ writeTaskInput: {
 	},
 addTaskButton: {
 		backgroundColor: '#fff',
-		borderRadius: 10,
+		borderRadius: 50,
 		borderWidth: 1,
-		borderColor: '#e3e3e3',
+		borderColor: '#fff',
 		marginBottom: 20,
 		width: 60,
 		height: 60,

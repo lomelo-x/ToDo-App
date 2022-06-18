@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 		marginBottom: 20,
 	},
 	taskText: {
-		fontSize: 16,
+		fontSize: 18,
 		fontWeight: 'bold',
 	},
 	taskLeft: {

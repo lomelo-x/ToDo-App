@@ -44,42 +44,21 @@ const styles = StyleSheet.create({
 	itemsContainer: {
 		marginTop: 20,
 	},
-	writeTaskContainer: {
-		position: 'absolute',
-		bottom: 5,
-		width: '100%',
+	writeTaskContainer
+writeTaskInput
+addTaskButton: {
+		backgroundColor: '#E8EAED',
+		padding: 10,
+		borderRadius: 5,
+		borderWidth: 1,
+		borderColor: '#e3e3e3',
 		flexDirection: 'row',
 		alignItems: 'center',
-		justifyContent: 'space-around',
-		paddingHorizontal: 15,
-		paddingVertical: 15,
-		borderRadius: 10,
-		marginTop: 20,
-	},
-writeTaskInput: {
-		borderWidth: 1,
-		backgroundColor: '#fff',
-		borderColor: '#e3e3e3',
-		borderRadius: 10,
-		padding: 10,
+		justifyContent: 'space-between',
 		marginBottom: 20,
-		width: '80%',
-		height: 60,
-	},
-addTaskButton: {
-		backgroundColor: '#fff',
-		borderRadius: 10,
-		borderWidth: 1,
-		borderColor: '#e3e3e3',
-		marginBottom: 20,
-		width: 60,
-		height: 60,
-		alignItems: 'center',
-		justifyContent: 'center',
 	},
 addTaskButtonText: {
-		fontSize: 30,
-		textAlign: 'center',
+		fontSize: 24,
 		fontWeight: 'bold',
 	},
 });

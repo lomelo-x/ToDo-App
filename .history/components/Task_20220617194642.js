@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Task = ({ text }) => {
 	return (
-		<View style={styles.taskContainer}>
+		<View style={styles.task}>
 			<View style={styles.taskLeft}>
 				<TouchableOpacity style={styles.square}></TouchableOpacity>
 				<Text style={styles.taskText}>{text}</Text>
@@ -14,7 +14,7 @@ const Task = ({ text }) => {
 };
 
 const styles = StyleSheet.create({
-	taskContainer: {
+	task: {
 		backgroundColor: '#f5f5f5',
 		padding: 10,
 		marginBottom: 10,
@@ -27,23 +27,15 @@ const styles = StyleSheet.create({
 		marginBottom: 20,
 	},
 	taskText: {
-		fontSize: 16,
+		fontSize: 18,
 		fontWeight: 'bold',
 	},
 	taskLeft: {
 		flexDirection: 'row',
 		alignItems: 'center',
 		flexWrap: 'wrap',
-		maxWidth: '80%',
 	},
-	taskRight: {
-		width: 20,
-		height: 20,
-		borderRadius: 50,
-		borderColor: '#e3e3e3',
-		borderWidth: 1,
-		marginRight: 10,
-	},
+	taskRight: {},
 	square: {
 		width: 24,
 		height: 24,

@@ -14,7 +14,7 @@ const Task = ({ text }) => {
 };
 
 const styles = StyleSheet.create({
-	taskContainer: {
+	task: {
 		backgroundColor: '#f5f5f5',
 		padding: 10,
 		marginBottom: 10,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 		marginBottom: 20,
 	},
 	taskText: {
-		fontSize: 16,
+		fontSize: 18,
 		fontWeight: 'bold',
 	},
 	taskLeft: {
