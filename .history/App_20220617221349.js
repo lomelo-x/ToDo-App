@@ -37,7 +37,7 @@ export default function App() {
 					{taskItems.map((item, index) => {
 						return (
 							<TouchableOpacity onPress={() => completeTask(index)} key={index}>
-								<Task text={item} completeTask={completeTask} index={index} />
+								<Task text={item} index={index} />
 							</TouchableOpacity>
 						);
 					})}

@@ -13,7 +13,7 @@ import {
 import Task from './components/Task';
 
 export default function App() {
-	const [task, setTask] = useState('');
+	const [task, setTask] = useState();
 	const [taskItems, setTaskItems] = useState([]);
 
 	const handleAddTask = () => {
@@ -23,10 +23,8 @@ export default function App() {
 		console.log(task);
 	};
 
-	const completeTask = (index) => {
-		let newTaskItems = [...taskItems];
-		newTaskItems.splice(index, 1);
-		setTaskItems(newTaskItems);
+	const handleDeleteTask = (index) => {
+		
 	};
 
 	return (
@@ -36,8 +34,11 @@ export default function App() {
 				<View style={styles.itemsContainer}>
 					{taskItems.map((item, index) => {
 						return (
-							<TouchableOpacity onPress={() => completeTask(index)} key={index}>
-								<Task text={item} completeTask={completeTask} index={index} />
+							<TouchableOpacity
+								key={index}
+								onPress={() => handleDeleteTask(index)}
+							>
+								<Task text={item} />;
 							</TouchableOpacity>
 						);
 					})}
