@@ -1,49 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import {
-	StyleSheet,
-	Text,
-	View,
-	KeyboardAvoidingView,
-	Platform,
-	TextInput,
-	TouchableOpacity,
-	Keyboard,
-} from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity } from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
-	const [task, setTask] = useState();
-	const [taskItems, setTaskItems] = useState([]);
+	const [task, setTask] = useState('');
 
-	const handleAddTask = () => {
-		Keyboard.dismiss();
-		setTaskItems([...taskItems, task]);
-		setTask(null);
-		console.log(task);
-	};
-
+	
 	return (
 		<View style={styles.container}>
 			<View style={styles.todoContainer}>
 				<Text style={styles.sectionTitle}>Today's Tasks</Text>
 				<View style={styles.itemsContainer}>
-					{taskItems.map((item, index) => {
-						return <Task key={index} text={item} />;
-					})}
+					<Task text={'Task 1'} />
+					<Task text={'Task 2'}/>
+					<Task text={'Task 3'}/>
 				</View>
 			</View>
 			<KeyboardAvoidingView
-				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-				style={styles.writeTaskContainer}
-			>
-				<TextInput
-					style={styles.writeTaskInput}
-					placeholder={'Write a task...'}
-					value={task}
-					onChangeText={(text) => setTask(text)}
-				/>
-				<TouchableOpacity onPress={() => handleAddTask()}>
+			behavior={Platform.OS === 'ios' ? 'padding' : "height" }
+			style={styles.writeTaskContainer}>
+				<TextInput style={styles.writeTaskInput} placeholder="Write a task..." />
+				<TouchableOpacity>
 					<View style={styles.addTaskButton}>
 						<Text style={styles.addTaskButtonText}>+</Text>
 					</View>
@@ -82,7 +60,7 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		marginTop: 20,
 	},
-	writeTaskInput: {
+writeTaskInput: {
 		borderWidth: 1,
 		backgroundColor: '#fff',
 		borderColor: '#e3e3e3',
@@ -92,7 +70,7 @@ const styles = StyleSheet.create({
 		width: '80%',
 		height: 60,
 	},
-	addTaskButton: {
+addTaskButton: {
 		backgroundColor: '#fff',
 		borderRadius: 10,
 		borderWidth: 1,
@@ -103,7 +81,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-	addTaskButtonText: {
+addTaskButtonText: {
 		fontSize: 30,
 		textAlign: 'center',
 		fontWeight: 'bold',
