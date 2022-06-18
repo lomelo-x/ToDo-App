@@ -8,9 +8,9 @@ export default function App() {
 			<View style={styles.todoContainer}>
 				<Text style={styles.sectionTitle}>Today's Tasks</Text>
 				<View style={styles.itemsContainer}>
-					<Task text={'Task 1'} />
-					<Task text={'Task 2'}/>
-					<Task text={'Task 3'}/>
+					<Task />
+					<Task />
+					<Task />
 				</View>
 			</View>
 		</View>

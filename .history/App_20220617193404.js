@@ -1,16 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Task from './components/Task';
+import Todo from './components/Todo';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
+			{/* Todays Todos */}
 			<View style={styles.todoContainer}>
-				<Text style={styles.sectionTitle}>Today's Tasks</Text>
+				<Text style={styles.sectionTitle}>Today's Taskss</Text>
 				<View style={styles.itemsContainer}>
-					<Task text={'Task 1'} />
-					<Task text={'Task 2'}/>
-					<Task text={'Task 3'}/>
+					<Todo />
+					<Todo />
+					<Todo />
 				</View>
 			</View>
 		</View>
